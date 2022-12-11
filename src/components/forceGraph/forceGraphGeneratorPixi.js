@@ -192,7 +192,11 @@ export function runForceGraphPixi(
 
     links.forEach((link) => {
       let { source, target, number } = link;
-      visualLinks.lineStyle(2, 0xD3D3D3);
+      if (link.isSuspicious) {
+        visualLinks.lineStyle(3, 0x9C0101);
+      } else {
+        visualLinks.lineStyle(2, 0xD3D3D3);
+      }
       visualLinks.moveTo(source.x, source.y);
       visualLinks.lineTo(target.x, target.y);
     });

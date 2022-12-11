@@ -56,7 +56,10 @@ function InteractionGraph() {
           <Button onClick={() => updateFilters('01/01/2017', '06/1/2017', '2017-Q1-2')}>2017 Q1-2</Button>
           <Button onClick={() => updateFilters('06/01/2017', '12/31/2017', '2017 Q3-4')}>2017 Q3-4</Button>
         </span>
-        <span>summary</span>
+        <span className='summaryBox'>
+          <div>Total Interactions: {data.links.length}</div>
+          <div>Total Suspicious Interactions: {data.links.filter(x => x.isSuspicious).length}</div>
+        </span>
       </div>
     </div>
   );
