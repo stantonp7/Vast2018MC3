@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "title":"Interactions Among Suspicious",
+        "description":"Network graph showing how our group of suspicious people interact over time.  Includes different data sets across different date ranges",
+        "visualType": "Network Graph",
+        "author": "Paul Stanton",
+        "icon": "Icon",
+        "url": "/interaction-graph",
+        "isExternal": false
+    },
+    {
+        "id": 2,
+        "title":"Suspicious Employee Interactions",
+        "description":"Description!",
+        "visualType": "Animated Heatmap",
+        "author": "Maria Lentini",
+        "icon": "Icon",
+        "url": "/animated-heatmap",
+        "isExternal": true
+    }
+]
