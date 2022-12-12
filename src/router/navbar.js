@@ -38,10 +38,6 @@ export function Navbar(props) {
 		setMobileMoreAnchorEl(event.currentTarget);
 	};
 
-	const login = async () => {
-		console.log('login');
-	};
-
 	const menuId = "primary-search-account-menu";
 	const renderMenu = (
 		<Menu
@@ -58,8 +54,7 @@ export function Navbar(props) {
 			}}
 			open={isMenuOpen}
 			onClose={handleMenuClose}>
-			{! <MenuItem onClick={login}> SignIn</MenuItem>}
-			{ <MenuItem onClick={handleMenuClose}> Profile</MenuItem>}
+			{ <MenuItem component={Link} to="/home">Home</MenuItem>}
 		</Menu>
 	);
 
@@ -79,10 +74,7 @@ export function Navbar(props) {
 			}}
 			open={isMobileMenuOpen}
 			onClose={handleMobileMenuClose}>
-			{! <MenuItem onClick={login}> SignIn</MenuItem>}
-			{ <MenuItem onClick={handleMenuClose}> Profile</MenuItem>}
-			{ <MenuItem component={Link} to="/cart">View Cart</MenuItem>}
-			{ <MenuItem component={Link} to="/pending">Pending Orders</MenuItem>}
+			{ <MenuItem component={Link} to="/home">Home</MenuItem>}
 		</Menu>
 	);
 
