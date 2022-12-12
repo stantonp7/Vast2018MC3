@@ -10,7 +10,7 @@ function VisualizationLink({ visualization }) {
             <Card sx={{ width: 400, margin: 5}}>
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
-                            {visualization.title} <HubIcon color="primary"></HubIcon>
+                            {visualization.title}
                         </Typography>
                         <Typography sx={{ mb: 1.5 }} color="text.secondary">
                             {visualization.visualType}
