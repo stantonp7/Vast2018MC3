@@ -39,7 +39,7 @@ export function runForceGraphPixi(
         .duration(200)
         .style("opacity", 0.9);
     div
-        .html(hoverTooltip(d))
+        .html(hoverTooltip(d, links))
         .style("left", `${x}px`)
         .style("top", `${y - 28}px`);
   };
@@ -124,7 +124,7 @@ export function runForceGraphPixi(
 
   nodes.forEach((node) => {
     const boundDrag = onDragMove.bind(node);
-    const { name, gender } = node;
+    const { name, id } = node;
     node.gfx = new PIXI.Graphics();
     node.gfx.lineStyle(1, 0xD3D3D3);
     node.gfx.beginFill(colorScale(node));
@@ -156,7 +156,7 @@ export function runForceGraphPixi(
     // show tooltip when mouse is over node
     node.gfx.on('mouseover', (mouseData) => {
       addTooltip(nodeHoverTooltip,
-          { name },
+          { name, id },
           mouseData.data.originalEvent.pageX,
           mouseData.data.originalEvent.pageY
       );

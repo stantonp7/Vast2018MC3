@@ -11,8 +11,8 @@
     },
     {
         "id": 2,
-        "title":"Suspicious Employee Interactions",
-        "description":"Description!",
+        "title":"Suspicious Interactions Over Time",
+        "description":"A heatmap that helps indicate who is engaging in suspicious interactions over the course of the entire dataset.",
         "visualType": "Animated Heatmap",
         "author": "Maria Lentini",
         "icon": "Icon",

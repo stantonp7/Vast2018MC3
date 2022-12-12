@@ -65,10 +65,13 @@ function InteractionGraph() {
     setData(subset);
   }
 
-  const nodeHoverTooltip = React.useCallback((node) => {
+  const nodeHoverTooltip = React.useCallback((node, links) => {
+    const edges = links.filter(x => x.source.id == node.id || x.target.id == node.id);
     return `<div>     
-      <b>${node.name}</b>
-    </div>`;
+      <div><b>${node.name}</b></div>
+      <div>Total: ${edges.length}
+      <div>Suspicious: ${edges.filter(x => x.isSuspicious).length}
+      </div>`;
   }, []);
   return (
     <div>

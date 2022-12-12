@@ -13,7 +13,7 @@ function VisualizationLink({ visualization }) {
                             {visualization.title} <HubIcon color="primary"></HubIcon>
                         </Typography>
                         <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                            {visualization.author} - {visualization.visualType}
+                            {visualization.visualType}
                         </Typography>
                         <Typography variant="body2">
                             {visualization.description}
