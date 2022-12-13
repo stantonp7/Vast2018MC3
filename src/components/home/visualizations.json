@@ -1,6 +1,36 @@
 [
     {
+        "id": 1,
+        "title":"Purchases",
+        "description":"Displays who is participating in purchases over time.  Bar Graph will animate and change as the time passes.",
+        "visualType": "Animated Bar Graph",
+        "author": "Mathew Williams",
+        "icon": "Icon",
+        "url": "/purchases",
+        "isExternal": true
+    },
+    {
         "id": 2,
+        "title":"Employees",
+        "description":"Line graph that shows you the unique employee count over time.  There is a slideable filter that lets you zoom in or expand your focus on a specific date range.",
+        "visualType": "Interactive Line Graph",
+        "author": "Mathew Williams",
+        "icon": "Icon",
+        "url": "/employees",
+        "isExternal": true
+    },
+    {
+        "id": 3,
+        "title":"Count of Interactions among Suspicious People",
+        "description":"Displays which users are interacting the most among the suspicious group.  It also breaks it down by interaction type.  The bar graph will animate and change as the date filter changes over time.",
+        "visualType": "Animated Bar Graph",
+        "author": "Mathew Williams",
+        "icon": "Icon",
+        "url": "/count-interactions-suspicious-people",
+        "isExternal": true
+    },
+    {
+        "id": 4,
         "title":"Suspicious Interactions Over Time",
         "description":"A heatmap that helps indicate who is engaging in suspicious interactions over the course of the entire dataset.",
         "visualType": "Animated Heatmap",
@@ -10,7 +40,7 @@
         "isExternal": true
     },
     {
-        "id": 3,
+        "id": 5,
         "title":"Suspicious Activity - Daily Number of Interactions",
         "description":"A Calendar Heatmap showing the daily number of suspicious interactions. Contains an interactive legend that allows you to click on a color and it will filter out the lower bound number.",
         "visualType": "Calendar Heatmap",
@@ -20,8 +50,8 @@
         "isExternal": true
     },
     {
-        "id": 1,
-        "title":"Interactions Among Suspicious",
+        "id": 6,
+        "title":"Interactions Network",
         "description":"Network graph showing how our group of suspicious people interact over time.  Includes different data sets across different date ranges",
         "visualType": "Network Graph",
         "author": "Paul Stanton",

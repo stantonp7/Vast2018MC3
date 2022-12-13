@@ -1,20 +1,16 @@
-import { Container } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import React from "react";
 import VisualizationLink from "./visualizationLink";
 import visualizations from "./visualizations.json";
 function Home(props) {
     var links = visualizations.map((visual) => {
-        return <VisualizationLink key={visual.id} visualization={visual}></VisualizationLink>
+        return<Grid item xs={4}><VisualizationLink key={visual.id} visualization={visual}></VisualizationLink></Grid>
     });
     return (
        
-        <Container>
-            <div className={'center'}>
-                <div>
+        <Grid container spacing={2}>
                     {links}
-                </div>
-            </div>
-        </Container>
+        </Grid>
     )
 }
 

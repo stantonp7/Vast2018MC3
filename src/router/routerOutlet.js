@@ -19,6 +19,18 @@ export function RouterOutlet() {
 				<Route path='/calendar-heatmap' component={() => { 
 					window.location.href = 'https://mc3-files.azurewebsites.net/calendar_heatmap.html'; 
 					return null;
+				}} />
+				<Route path='/purchases' component={() => { 
+					window.location.href = 'https://mc3-files.azurewebsites.net/Purchases.html'; 
+					return null;
+				}} />
+				<Route path='/employees' component={() => { 
+					window.location.href = 'https://mc3-files.azurewebsites.net/Employees.html'; 
+					return null;
+				}} />
+				<Route path='/count-interactions-suspicious-people' component={() => { 
+					window.location.href = 'https://mc3-files.azurewebsites.net/Count_Interactions_Suspicious_People.html'; 
+					return null;
 				}}/>
 				<Route exact path="/" render={() => (
 					<Redirect to="/home"/>
