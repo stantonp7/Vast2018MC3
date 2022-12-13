@@ -1,19 +1,14 @@
 import * as React from "react";
-import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Chip from "@mui/material/Chip";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import InputBase from "@mui/material/InputBase";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
-import SearchIcon from "@mui/icons-material/Search";
-import AccountCircle from "@mui/icons-material/AccountCircle";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import { Link } from "react-router-dom";
-import { Badge } from "@mui/material";
 import GestureIcon from '@mui/icons-material/Gesture';
 
 export function Navbar(props) {
@@ -21,10 +16,6 @@ export function Navbar(props) {
 	const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 	const isMenuOpen = Boolean(anchorEl);
 	const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-
-	const handleProfileMenuOpen = (event) => {
-		setAnchorEl(event.currentTarget);
-	};
 
 	const handleMobileMenuClose = () => {
 		setMobileMoreAnchorEl(null);
@@ -55,7 +46,8 @@ export function Navbar(props) {
 			}}
 			open={isMenuOpen}
 			onClose={handleMenuClose}>
-			{ <MenuItem component={Link} to="/home">Home</MenuItem>}
+			{ <MenuItem component={Link} to="/home">Home</MenuItem> }
+			{ <MenuItem component={Link} to="/sketches">Sketches</MenuItem> }
 		</Menu>
 	);
 
@@ -75,7 +67,8 @@ export function Navbar(props) {
 			}}
 			open={isMobileMenuOpen}
 			onClose={handleMobileMenuClose}>
-			{ <MenuItem component={Link} to="/home">Home</MenuItem>}
+			{ <MenuItem component={Link} to="/home">Home</MenuItem> }
+			{ <MenuItem component={Link} to="/sketches">Sketches</MenuItem> }
 		</Menu>
 	);
 
@@ -102,16 +95,16 @@ export function Navbar(props) {
 					<Box sx={{ flexGrow: 1 }} />
 					<Box sx={{ display: { xs: "none", md: "flex" } }}>
 					<IconButton
-							size='large'
-							edge='end'
-							aria-label='account of current user'
-							aria-controls={menuId}
-							aria-haspopup='true'
-							component={Link}
-							to="/sketches"
-							color='inherit'>
-							<GestureIcon />
-						</IconButton>
+						size='large'
+						edge='end'
+						aria-label='account of current user'
+						aria-controls={menuId}
+						aria-haspopup='true'
+						component={Link}
+						to="/sketches"
+						color='inherit'>
+						<GestureIcon />
+					</IconButton>
 					</Box>
 					<Box sx={{ display: { xs: "flex", md: "none" } }}>
 						<IconButton
