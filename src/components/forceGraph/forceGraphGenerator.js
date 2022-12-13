@@ -12,37 +12,12 @@ export function runForceGraph(
   const links = linksData.map((d) => Object.assign({}, d));
   const nodes = nodesData.map((d) => Object.assign({}, d));
 
-  const menuItems = [
-    {
-      title: 'First action',
-      action: (d) => {
-        // TODO: add any action you want to perform
-        console.log(d);
-      }
-    },
-    {
-      title: 'Second action',
-      action: (d) => {
-        // TODO: add any action you want to perform
-        console.log(d);
-      }
-    }
-  ];
-
   const containerRect = container.getBoundingClientRect();
   const height = containerRect.height;
   const width = containerRect.width;
 
   const color = () => { return "#f0f8ff"; };
   const suspiciousColor = () => { return "#FF0000" };
-
-  const icon = (d) => {
-    return d.gender === "male" ? "\uf222" : "\uf221";
-  }
-
-  const getClass = (d) => {
-    return d.gender === "male" ? styles.male : styles.female;
-  };
 
   const drag = (simulation) => {
     const dragstarted = (d) => {
@@ -130,9 +105,6 @@ export function runForceGraph(
     .selectAll("circle")
     .data(nodes)
     .join("circle")
-    .on('contextmenu', (d) => {
-      createContextMenu(d, menuItems, width, height, '#graphSvg');
-    })
     .attr("r", 12)
     .attr("fill", (d) => {
       if (d.isSuspicious) {
@@ -149,13 +121,8 @@ export function runForceGraph(
     .data(nodes)
     .enter()
     .append("text")
-    .on('contextmenu', (d) => {
-      createContextMenu(d, menuItems, width, height, '#graphSvg');
-    })
     .attr('text-anchor', 'middle')
     .attr('dominant-baseline', 'central')
-    .attr("class", d => `fa ${getClass(d)}`)
-    .text(d => {return icon(d);})
     .call(drag(simulation));
 
   label.on("mouseover", (d) => {
