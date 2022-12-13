@@ -1,15 +1,5 @@
 [
     {
-        "id": 1,
-        "title":"Interactions Among Suspicious",
-        "description":"Network graph showing how our group of suspicious people interact over time.  Includes different data sets across different date ranges",
-        "visualType": "Network Graph",
-        "author": "Paul Stanton",
-        "icon": "Icon",
-        "url": "/interaction-graph",
-        "isExternal": false
-    },
-    {
         "id": 2,
         "title":"Suspicious Interactions Over Time",
         "description":"A heatmap that helps indicate who is engaging in suspicious interactions over the course of the entire dataset.",
@@ -18,5 +8,25 @@
         "icon": "Icon",
         "url": "/animated-heatmap",
         "isExternal": true
+    },
+    {
+        "id": 3,
+        "title":"Suspicious Activity - Daily Number of Interactions",
+        "description":"A Calendar Heatmap showing the daily number of suspicious interactions. Contains an interactive legend that allows you to click on a color and it will filter out the lower bound number.",
+        "visualType": "Calendar Heatmap",
+        "author": "Brianna Montalvo",
+        "icon": "Icon",
+        "url": "/calendar-heatmap",
+        "isExternal": true
+    },
+    {
+        "id": 1,
+        "title":"Interactions Among Suspicious",
+        "description":"Network graph showing how our group of suspicious people interact over time.  Includes different data sets across different date ranges",
+        "visualType": "Network Graph",
+        "author": "Paul Stanton",
+        "icon": "Icon",
+        "url": "/interaction-graph",
+        "isExternal": false
     }
 ]

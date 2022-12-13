@@ -20,7 +20,7 @@ function VisualizationLink({ visualization }) {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Button component={Link} to={visualization.url} size="small">View</Button>
+                    <Button component={Link} target={visualization.isExternal && "_blank"} to={visualization.url} size="small">View</Button>
                     </CardActions>
                 </Card>
         </div>

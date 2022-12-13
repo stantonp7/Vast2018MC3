@@ -14,6 +14,7 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import { Link } from "react-router-dom";
 import { Badge } from "@mui/material";
+import GestureIcon from '@mui/icons-material/Gesture';
 
 export function Navbar(props) {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -100,7 +101,17 @@ export function Navbar(props) {
 					)}
 					<Box sx={{ flexGrow: 1 }} />
 					<Box sx={{ display: { xs: "none", md: "flex" } }}>
-
+					<IconButton
+							size='large'
+							edge='end'
+							aria-label='account of current user'
+							aria-controls={menuId}
+							aria-haspopup='true'
+							component={Link}
+							to="/sketches"
+							color='inherit'>
+							<GestureIcon />
+						</IconButton>
 					</Box>
 					<Box sx={{ display: { xs: "flex", md: "none" } }}>
 						<IconButton
